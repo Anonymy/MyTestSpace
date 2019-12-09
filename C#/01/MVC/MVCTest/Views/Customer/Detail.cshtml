@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+    
+}
+@using MVCTest.Models
+@model Customer
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Detail</title>
+    </head>
+    <body>
+        <div>
+            <form>
+                <table>
+                    <tr>
+                        <td> id</td>
+                        <td>@Model.id</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>@Model.strName</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
