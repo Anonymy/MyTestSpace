@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PT_CAMERA_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="ASSET_ID" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CAMERA_NO" Type="varchar2" MaxLength="256" Nullable="false" />
+          <Property Name="POSITION_CODE" Type="varchar2" MaxLength="256" />
+          <Property Name="POSITION_ID" Type="number" Precision="22" Scale="0" />
+          <Property Name="CAMERA_NAME" Type="varchar2" MaxLength="256" />
+          <Property Name="ORG_ID" Type="number" Precision="22" Scale="0" />
+          <Property Name="ADDRESS" Type="varchar2" MaxLength="128" />
+          <Property Name="CAMERA_IP" Type="varchar2" MaxLength="60" />
+          <Property Name="LONGITUDE" Type="varchar2" MaxLength="20" />
+          <Property Name="LATITUDE" Type="varchar2" MaxLength="20" />
+          <Property Name="SN" Type="varchar2" MaxLength="128" />
+          <Property Name="CAMERA_MODEL" Type="varchar2" MaxLength="60" />
+          <Property Name="MANUFACTURER" Type="varchar2" MaxLength="60" />
+          <Property Name="SUPPLIER" Type="varchar2" MaxLength="60" />
+          <Property Name="CAMERA_STATE" Type="varchar2" MaxLength="2" />
+          <Property Name="ADD_ID" Type="varchar2" MaxLength="36" />
+          <Property Name="ADD_TIME" Type="date" />
+          <Property Name="MODIFY_ID" Type="varchar2" MaxLength="36" />
+          <Property Name="MODIFY_TIME" Type="date" />
+          <Property Name="USER_NAME" Type="varchar2" MaxLength="20" />
+          <Property Name="PASS_WORD" Type="varchar2" MaxLength="20" />
+          <Property Name="CASE_INSTALL_TYPE" Type="number" Precision="3" Scale="0" />
+          <Property Name="AREA_CODE" Type="varchar2" MaxLength="15" />
+          <Property Name="MONITOR_TYPE" Type="varchar2" MaxLength="5" />
+          <Property Name="POINT_NAME" Type="varchar2" MaxLength="256" />
+          <Property Name="CAMERA_IP6" Type="varchar2" MaxLength="60" />
+          <Property Name="SUBNET_MASK" Type="varchar2" MaxLength="100" />
+          <Property Name="GATEWAY" Type="varchar2" MaxLength="100" />
+          <Property Name="MAC_ADDRESS" Type="varchar2" MaxLength="100" />
+          <Property Name="ONU_SN" Type="varchar2" MaxLength="200" />
+          <Property Name="CAMERA_TYPE" Type="varchar2" MaxLength="100" />
+          <Property Name="CAMERA_FUN_TYPE" Type="varchar2" MaxLength="100" />
+          <Property Name="FILL_LIGTH_ATTR" Type="number" Precision="2" Scale="0" />
+          <Property Name="CAMERA_ENCODE_TYPE" Type="number" Precision="2" Scale="0" />
+          <Property Name="POWER_TAKE_TYPE" Type="number" Precision="2" Scale="0" />
+          <Property Name="POWER_TAKE_LENGTH" Type="varchar2" MaxLength="50" />
+          <Property Name="SOUND_ALARM" Type="number" Precision="2" Scale="0" />
+          <Property Name="RESOLUTION" Type="varchar2" MaxLength="20" />
+          <Property Name="SOFT_VERSION" Type="varchar2" MaxLength="100" />
+          <Property Name="LENS_PARAM" Type="varchar2" MaxLength="50" />
+          <Property Name="IS_HAVE_CONSOLE" Type="number" Precision="1" Scale="0" />
+          <Property Name="INSTALL_WAY" Type="varchar2" MaxLength="20" />
+          <Property Name="LINEAR_WAY" Type="varchar2" MaxLength="20" />
+          <Property Name="RESOURCE_PLACE" Type="varchar2" MaxLength="64" />
+          <Property Name="IMPORT_WATCH" Type="varchar2" MaxLength="512" />
+          <Property Name="WATCH_UNITS" Type="varchar2" MaxLength="1000" />
+          <Property Name="POSITION_TYPE" Type="varchar2" MaxLength="100" />
+          <Property Name="COMMUNITY" Type="varchar2" MaxLength="64" />
+          <Property Name="STREET" Type="varchar2" MaxLength="60" />
+          <Property Name="WATCH_SPEC_LOCATION" Type="varchar2" MaxLength="60" />
+          <Property Name="ROAD_DIRECTION" Type="varchar2" MaxLength="260" />
+          <Property Name="FOUL_LINE" Type="varchar2" MaxLength="256" />
+          <Property Name="FEN_JU" Type="varchar2" MaxLength="100" />
+          <Property Name="POLICE_STATION" Type="varchar2" MaxLength="100" />
+          <Property Name="CAMERA_DIRECTION" Type="varchar2" MaxLength="20" />
+          <Property Name="INSTALL_HEIGHT" Type="varchar2" MaxLength="20" />
+          <Property Name="CROSS_ARM1" Type="varchar2" MaxLength="20" />
+          <Property Name="CROSS_ARM2" Type="varchar2" MaxLength="20" />
+          <Property Name="INDOOR_OR_NOT" Type="number" Precision="1" Scale="0" />
+          <Property Name="SPECIAL_PHOTO_PATH" Type="varchar2" MaxLength="100" />
+          <Property Name="LOCATION_PHOTO_PATH" Type="varchar2" MaxLength="100" />
+          <Property Name="REAL_PHOTO_PATH" Type="varchar2" MaxLength="100" />
+          <Property Name="NETWORK_PROPERTIES" Type="number" Precision="1" Scale="0" />
+          <Property Name="POLICE_AREA_CODE" Type="varchar2" MaxLength="100" />
+          <Property Name="INSTALL_PERSION" Type="varchar2" MaxLength="20" />
+          <Property Name="INSTALL_TIME" Type="date" />
+          <Property Name="BUILD_PERIOD" Type="number" Precision="2" Scale="0" />
+          <Property Name="PROJECT_NAME" Type="varchar2" MaxLength="100" />
+          <Property Name="MANAGER_UNIT" Type="varchar2" MaxLength="100" />
+          <Property Name="MANAGER_UNIT_TEL" Type="varchar2" MaxLength="100" />
+          <Property Name="MAINTAIN_UNIT" Type="varchar2" MaxLength="100" />
+          <Property Name="MAINTAIN_UNIT_TEL" Type="varchar2" MaxLength="100" />
+          <Property Name="RECODE_SAVE_TYPE" Type="number" Precision="1" Scale="0" />
+          <Property Name="DEVICE_STATE" Type="number" Precision="1" Scale="0" />
+          <Property Name="INDUSTRY_OWN" Type="varchar2" MaxLength="100" />
+          <Property Name="IS_REGISTER_IMOS" Type="number" Precision="1" Scale="0" />
+          <Property Name="IS_WIFI" Type="number" Precision="1" Scale="0" />
+          <Property Name="IS_FLASH" Type="number" Precision="1" Scale="0" />
+          <Property Name="CAMERA_NO_STR" Type="varchar2" MaxLength="256" />
+          <Property Name="CAMERA_VCN_CODE" Type="varchar2" MaxLength="256" />
+          <Property Name="FIELD_NO" Type="varchar2" MaxLength="256" />
+          <Property Name="KEY_UNIT" Type="varchar2" MaxLength="20" />
+          <Property Name="UNIT_TYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="SHOW_LEVEL" Type="number" Precision="38" Scale="0" />
+          <Property Name="PROTOCOL_TYPE" Type="varchar2" MaxLength="60" />
+          <Property Name="CAMERA_PORT" Type="varchar2" MaxLength="8" />
+          <Property Name="INTERFACE_TYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="CHANNEL" Type="varchar2" MaxLength="50" />
+          <Property Name="USER_OBJECT" Type="varchar2" MaxLength="128" />
+          <Property Name="IMG_PATH" Type="varchar2" MaxLength="256" />
+          <Property Name="CAMERA_DESC" Type="varchar2" MaxLength="256" />
+          <Property Name="IS_REGISTER_VCN" Type="number" Precision="1" Scale="0" />
+          <Property Name="IS_DEL" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ORDER_VALUE" Type="number" Precision="8" Scale="0" />
+          <Property Name="POLLING_RESULT" Type="number" Precision="4" Scale="0" />
+          <Property Name="POLLING_TIME" Type="date" />
+          <Property Name="SERVER_ID" Type="number" Precision="20" Scale="0" />
+          <Property Name="SHORT_MSG" Type="varchar2" MaxLength="4000" />
+          <Property Name="CAMERA_BELONGS_ID" Type="varchar2" MaxLength="100" />
+          <Property Name="RELATED_CUSTOMS" Type="varchar2" MaxLength="2" />
+          <Property Name="ADDED_TO_SDE" Type="number" Precision="1" Scale="0" />
+          <Property Name="CAMERA_BAK" Type="varchar2" MaxLength="200" />
+          <Property Name="CAMERA_BELONGS_PK" Type="varchar2" MaxLength="100" />
+          <Property Name="MEMBERBAR_CODE" Type="varchar2" MaxLength="200" />
+          <Property Name="IS_BRANCH" Type="number" Precision="38" Scale="0" />
+          <Property Name="IS_WATCHPOS" Type="number" Precision="1" Scale="0" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“SHINY.PT_USER_INFO”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="PT_USER_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USER_NAME" />
+            <PropertyRef Name="PASSWORD" />
+            <PropertyRef Name="REAL_NAME" />
+            <PropertyRef Name="IS_DEL" />
+            <PropertyRef Name="ORDER_VALUE" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="USER_NAME" Type="varchar2" MaxLength="60" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar2" MaxLength="60" Nullable="false" />
+          <Property Name="IS_MUST_MODIFY_PSD" Type="number" Precision="1" Scale="0" />
+          <Property Name="REAL_NAME" Type="varchar2" MaxLength="256" Nullable="false" />
+          <Property Name="PINYIN" Type="varchar2" MaxLength="512" />
+          <Property Name="SEX" Type="number" Precision="38" Scale="0" />
+          <Property Name="BIRTHDAY" Type="date" />
+          <Property Name="ORG_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="JOB_ID" Type="varchar2" MaxLength="8" />
+          <Property Name="MOBILE_NO" Type="varchar2" MaxLength="20" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+          <Property Name="USER_TYPE" Type="number" Precision="38" Scale="0" />
+          <Property Name="LAST_LOGIN_TIME" Type="date" />
+          <Property Name="LAST_LOGIN_IP" Type="varchar2" MaxLength="30" />
+          <Property Name="LOGIN_COUNT" Type="number" Precision="38" Scale="0" />
+          <Property Name="QQ_NO" Type="varchar2" MaxLength="30" />
+          <Property Name="MSN_NO" Type="varchar2" MaxLength="30" />
+          <Property Name="HOME_ADDRESS" Type="varchar2" MaxLength="256" />
+          <Property Name="USER_AVATAR" Type="varchar2" MaxLength="128" />
+          <Property Name="VCN_USER_ID" Type="varchar2" MaxLength="128" />
+          <Property Name="VCN_STR" Type="varchar2" MaxLength="128" />
+          <Property Name="PTZ_LEVEL" Type="number" Precision="2" Scale="0" />
+          <Property Name="IS_USE_VALIDITY" Type="number" Precision="1" Scale="0" />
+          <Property Name="VALIDITY_BEGIN_DATE" Type="date" />
+          <Property Name="VALIDITY_END_DATE" Type="date" />
+          <Property Name="SUB_SYS_PRIVILEGE" Type="varchar2" MaxLength="128" />
+          <Property Name="IS_DEL" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ORDER_VALUE" Type="number" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="ADD_ID" Type="number" Precision="20" Scale="0" />
+          <Property Name="ADD_TIME" Type="date" />
+          <Property Name="MODIFY_ID" Type="number" Precision="20" Scale="0" />
+          <Property Name="MODIFY_TIME" Type="date" />
+          <Property Name="CHANGE_FLAG" Type="number" Precision="4" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="PT_CAMERA_INFO" EntityType="Self.PT_CAMERA_INFO" Schema="SHINY" store:Type="Tables" />
+          <EntitySet Name="PT_USER_INFO" EntityType="Self.PT_USER_INFO" store:Type="Tables" store:Schema="SHINY">
+            <DefiningQuery>SELECT 
+"PT_USER_INFO"."ID" AS "ID", 
+"PT_USER_INFO"."USER_NAME" AS "USER_NAME", 
+"PT_USER_INFO"."PASSWORD" AS "PASSWORD", 
+"PT_USER_INFO"."IS_MUST_MODIFY_PSD" AS "IS_MUST_MODIFY_PSD", 
+"PT_USER_INFO"."REAL_NAME" AS "REAL_NAME", 
+"PT_USER_INFO"."PINYIN" AS "PINYIN", 
+"PT_USER_INFO"."SEX" AS "SEX", 
+"PT_USER_INFO"."BIRTHDAY" AS "BIRTHDAY", 
+"PT_USER_INFO"."ORG_ID" AS "ORG_ID", 
+"PT_USER_INFO"."JOB_ID" AS "JOB_ID", 
+"PT_USER_INFO"."MOBILE_NO" AS "MOBILE_NO", 
+"PT_USER_INFO"."EMAIL" AS "EMAIL", 
+"PT_USER_INFO"."USER_TYPE" AS "USER_TYPE", 
+"PT_USER_INFO"."LAST_LOGIN_TIME" AS "LAST_LOGIN_TIME", 
+"PT_USER_INFO"."LAST_LOGIN_IP" AS "LAST_LOGIN_IP", 
+"PT_USER_INFO"."LOGIN_COUNT" AS "LOGIN_COUNT", 
+"PT_USER_INFO"."QQ_NO" AS "QQ_NO", 
+"PT_USER_INFO"."MSN_NO" AS "MSN_NO", 
+"PT_USER_INFO"."HOME_ADDRESS" AS "HOME_ADDRESS", 
+"PT_USER_INFO"."USER_AVATAR" AS "USER_AVATAR", 
+"PT_USER_INFO"."VCN_USER_ID" AS "VCN_USER_ID", 
+"PT_USER_INFO"."VCN_STR" AS "VCN_STR", 
+"PT_USER_INFO"."PTZ_LEVEL" AS "PTZ_LEVEL", 
+"PT_USER_INFO"."IS_USE_VALIDITY" AS "IS_USE_VALIDITY", 
+"PT_USER_INFO"."VALIDITY_BEGIN_DATE" AS "VALIDITY_BEGIN_DATE", 
+"PT_USER_INFO"."VALIDITY_END_DATE" AS "VALIDITY_END_DATE", 
+"PT_USER_INFO"."SUB_SYS_PRIVILEGE" AS "SUB_SYS_PRIVILEGE", 
+"PT_USER_INFO"."IS_DEL" AS "IS_DEL", 
+"PT_USER_INFO"."ORDER_VALUE" AS "ORDER_VALUE", 
+"PT_USER_INFO"."ADD_ID" AS "ADD_ID", 
+"PT_USER_INFO"."ADD_TIME" AS "ADD_TIME", 
+"PT_USER_INFO"."MODIFY_ID" AS "MODIFY_ID", 
+"PT_USER_INFO"."MODIFY_TIME" AS "MODIFY_TIME", 
+"PT_USER_INFO"."CHANGE_FLAG" AS "CHANGE_FLAG"
+FROM "SHINY"."PT_USER_INFO" "PT_USER_INFO"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PT_CAMERA_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ASSET_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CAMERA_NO" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="POSITION_CODE" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="POSITION_ID" Type="Decimal" Precision="22" Scale="0" />
+          <Property Name="CAMERA_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ORG_ID" Type="Decimal" Precision="22" Scale="0" />
+          <Property Name="ADDRESS" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_IP" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="LONGITUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LATITUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SN" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_MODEL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="MANUFACTURER" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SUPPLIER" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_STATE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ADD_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="ADD_TIME" Type="DateTime" />
+          <Property Name="MODIFY_ID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFY_TIME" Type="DateTime" />
+          <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PASS_WORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_INSTALL_TYPE" Type="Int16" />
+          <Property Name="AREA_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MONITOR_TYPE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="POINT_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_IP6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SUBNET_MASK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GATEWAY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MAC_ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ONU_SN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_FUN_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FILL_LIGTH_ATTR" Type="Int16" />
+          <Property Name="CAMERA_ENCODE_TYPE" Type="Int16" />
+          <Property Name="POWER_TAKE_TYPE" Type="Int16" />
+          <Property Name="POWER_TAKE_LENGTH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOUND_ALARM" Type="Int16" />
+          <Property Name="RESOLUTION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SOFT_VERSION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LENS_PARAM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IS_HAVE_CONSOLE" Type="Int16" />
+          <Property Name="INSTALL_WAY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LINEAR_WAY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RESOURCE_PLACE" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="IMPORT_WATCH" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="WATCH_UNITS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="POSITION_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="COMMUNITY" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="STREET" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="WATCH_SPEC_LOCATION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ROAD_DIRECTION" Type="String" MaxLength="260" FixedLength="false" Unicode="false" />
+          <Property Name="FOUL_LINE" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FEN_JU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="POLICE_STATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_DIRECTION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="INSTALL_HEIGHT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CROSS_ARM1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CROSS_ARM2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="INDOOR_OR_NOT" Type="Int16" />
+          <Property Name="SPECIAL_PHOTO_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION_PHOTO_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="REAL_PHOTO_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NETWORK_PROPERTIES" Type="Int16" />
+          <Property Name="POLICE_AREA_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="INSTALL_PERSION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="INSTALL_TIME" Type="DateTime" />
+          <Property Name="BUILD_PERIOD" Type="Int16" />
+          <Property Name="PROJECT_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MANAGER_UNIT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MANAGER_UNIT_TEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MAINTAIN_UNIT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MAINTAIN_UNIT_TEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RECODE_SAVE_TYPE" Type="Int16" />
+          <Property Name="DEVICE_STATE" Type="Int16" />
+          <Property Name="INDUSTRY_OWN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IS_REGISTER_IMOS" Type="Int16" />
+          <Property Name="IS_WIFI" Type="Int16" />
+          <Property Name="IS_FLASH" Type="Int16" />
+          <Property Name="CAMERA_NO_STR" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_VCN_CODE" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FIELD_NO" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="KEY_UNIT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UNIT_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SHOW_LEVEL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PROTOCOL_TYPE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_PORT" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="INTERFACE_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CHANNEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USER_OBJECT" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="IMG_PATH" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_DESC" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="IS_REGISTER_VCN" Type="Int16" />
+          <Property Name="IS_DEL" Type="Int16" Nullable="false" />
+          <Property Name="ORDER_VALUE" Type="Int32" />
+          <Property Name="POLLING_RESULT" Type="Int16" />
+          <Property Name="POLLING_TIME" Type="DateTime" />
+          <Property Name="SERVER_ID" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="SHORT_MSG" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_BELONGS_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RELATED_CUSTOMS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ADDED_TO_SDE" Type="Int16" />
+          <Property Name="CAMERA_BAK" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CAMERA_BELONGS_PK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MEMBERBAR_CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IS_BRANCH" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="IS_WATCHPOS" Type="Int16" />
+        </EntityType>
+        <EntityType Name="PT_USER_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USER_NAME" />
+            <PropertyRef Name="PASSWORD" />
+            <PropertyRef Name="REAL_NAME" />
+            <PropertyRef Name="IS_DEL" />
+            <PropertyRef Name="ORDER_VALUE" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="USER_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IS_MUST_MODIFY_PSD" Type="Int16" />
+          <Property Name="REAL_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PINYIN" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="SEX" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="BIRTHDAY" Type="DateTime" />
+          <Property Name="ORG_ID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="JOB_ID" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="MOBILE_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USER_TYPE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="LAST_LOGIN_TIME" Type="DateTime" />
+          <Property Name="LAST_LOGIN_IP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LOGIN_COUNT" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="QQ_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MSN_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="HOME_ADDRESS" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="USER_AVATAR" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="VCN_USER_ID" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="VCN_STR" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="PTZ_LEVEL" Type="Int16" />
+          <Property Name="IS_USE_VALIDITY" Type="Int16" />
+          <Property Name="VALIDITY_BEGIN_DATE" Type="DateTime" />
+          <Property Name="VALIDITY_END_DATE" Type="DateTime" />
+          <Property Name="SUB_SYS_PRIVILEGE" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="IS_DEL" Type="Int16" Nullable="false" />
+          <Property Name="ORDER_VALUE" Type="Int16" Nullable="false" />
+          <Property Name="ADD_ID" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="ADD_TIME" Type="DateTime" />
+          <Property Name="MODIFY_ID" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="MODIFY_TIME" Type="DateTime" />
+          <Property Name="CHANGE_FLAG" Type="Int16" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PT_CAMERA_INFO" EntityType="Self.PT_CAMERA_INFO" />
+          <EntitySet Name="PT_USER_INFO" EntityType="Self.PT_USER_INFO" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="PT_CAMERA_INFO">
+            <EntityTypeMapping TypeName="Model.PT_CAMERA_INFO">
+              <MappingFragment StoreEntitySet="PT_CAMERA_INFO">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ASSET_ID" ColumnName="ASSET_ID" />
+                <ScalarProperty Name="CAMERA_NO" ColumnName="CAMERA_NO" />
+                <ScalarProperty Name="POSITION_CODE" ColumnName="POSITION_CODE" />
+                <ScalarProperty Name="POSITION_ID" ColumnName="POSITION_ID" />
+                <ScalarProperty Name="CAMERA_NAME" ColumnName="CAMERA_NAME" />
+                <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="CAMERA_IP" ColumnName="CAMERA_IP" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="CAMERA_MODEL" ColumnName="CAMERA_MODEL" />
+                <ScalarProperty Name="MANUFACTURER" ColumnName="MANUFACTURER" />
+                <ScalarProperty Name="SUPPLIER" ColumnName="SUPPLIER" />
+                <ScalarProperty Name="CAMERA_STATE" ColumnName="CAMERA_STATE" />
+                <ScalarProperty Name="ADD_ID" ColumnName="ADD_ID" />
+                <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+                <ScalarProperty Name="MODIFY_ID" ColumnName="MODIFY_ID" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="PASS_WORD" ColumnName="PASS_WORD" />
+                <ScalarProperty Name="CASE_INSTALL_TYPE" ColumnName="CASE_INSTALL_TYPE" />
+                <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+                <ScalarProperty Name="MONITOR_TYPE" ColumnName="MONITOR_TYPE" />
+                <ScalarProperty Name="POINT_NAME" ColumnName="POINT_NAME" />
+                <ScalarProperty Name="CAMERA_IP6" ColumnName="CAMERA_IP6" />
+                <ScalarProperty Name="SUBNET_MASK" ColumnName="SUBNET_MASK" />
+                <ScalarProperty Name="GATEWAY" ColumnName="GATEWAY" />
+                <ScalarProperty Name="MAC_ADDRESS" ColumnName="MAC_ADDRESS" />
+                <ScalarProperty Name="ONU_SN" ColumnName="ONU_SN" />
+                <ScalarProperty Name="CAMERA_TYPE" ColumnName="CAMERA_TYPE" />
+                <ScalarProperty Name="CAMERA_FUN_TYPE" ColumnName="CAMERA_FUN_TYPE" />
+                <ScalarProperty Name="FILL_LIGTH_ATTR" ColumnName="FILL_LIGTH_ATTR" />
+                <ScalarProperty Name="CAMERA_ENCODE_TYPE" ColumnName="CAMERA_ENCODE_TYPE" />
+                <ScalarProperty Name="POWER_TAKE_TYPE" ColumnName="POWER_TAKE_TYPE" />
+                <ScalarProperty Name="POWER_TAKE_LENGTH" ColumnName="POWER_TAKE_LENGTH" />
+                <ScalarProperty Name="SOUND_ALARM" ColumnName="SOUND_ALARM" />
+                <ScalarProperty Name="RESOLUTION" ColumnName="RESOLUTION" />
+                <ScalarProperty Name="SOFT_VERSION" ColumnName="SOFT_VERSION" />
+                <ScalarProperty Name="LENS_PARAM" ColumnName="LENS_PARAM" />
+                <ScalarProperty Name="IS_HAVE_CONSOLE" ColumnName="IS_HAVE_CONSOLE" />
+                <ScalarProperty Name="INSTALL_WAY" ColumnName="INSTALL_WAY" />
+                <ScalarProperty Name="LINEAR_WAY" ColumnName="LINEAR_WAY" />
+                <ScalarProperty Name="RESOURCE_PLACE" ColumnName="RESOURCE_PLACE" />
+                <ScalarProperty Name="IMPORT_WATCH" ColumnName="IMPORT_WATCH" />
+                <ScalarProperty Name="WATCH_UNITS" ColumnName="WATCH_UNITS" />
+                <ScalarProperty Name="POSITION_TYPE" ColumnName="POSITION_TYPE" />
+                <ScalarProperty Name="COMMUNITY" ColumnName="COMMUNITY" />
+                <ScalarProperty Name="STREET" ColumnName="STREET" />
+                <ScalarProperty Name="WATCH_SPEC_LOCATION" ColumnName="WATCH_SPEC_LOCATION" />
+                <ScalarProperty Name="ROAD_DIRECTION" ColumnName="ROAD_DIRECTION" />
+                <ScalarProperty Name="FOUL_LINE" ColumnName="FOUL_LINE" />
+                <ScalarProperty Name="FEN_JU" ColumnName="FEN_JU" />
+                <ScalarProperty Name="POLICE_STATION" ColumnName="POLICE_STATION" />
+                <ScalarProperty Name="CAMERA_DIRECTION" ColumnName="CAMERA_DIRECTION" />
+                <ScalarProperty Name="INSTALL_HEIGHT" ColumnName="INSTALL_HEIGHT" />
+                <ScalarProperty Name="CROSS_ARM1" ColumnName="CROSS_ARM1" />
+                <ScalarProperty Name="CROSS_ARM2" ColumnName="CROSS_ARM2" />
+                <ScalarProperty Name="INDOOR_OR_NOT" ColumnName="INDOOR_OR_NOT" />
+                <ScalarProperty Name="SPECIAL_PHOTO_PATH" ColumnName="SPECIAL_PHOTO_PATH" />
+                <ScalarProperty Name="LOCATION_PHOTO_PATH" ColumnName="LOCATION_PHOTO_PATH" />
+                <ScalarProperty Name="REAL_PHOTO_PATH" ColumnName="REAL_PHOTO_PATH" />
+                <ScalarProperty Name="NETWORK_PROPERTIES" ColumnName="NETWORK_PROPERTIES" />
+                <ScalarProperty Name="POLICE_AREA_CODE" ColumnName="POLICE_AREA_CODE" />
+                <ScalarProperty Name="INSTALL_PERSION" ColumnName="INSTALL_PERSION" />
+                <ScalarProperty Name="INSTALL_TIME" ColumnName="INSTALL_TIME" />
+                <ScalarProperty Name="BUILD_PERIOD" ColumnName="BUILD_PERIOD" />
+                <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+                <ScalarProperty Name="MANAGER_UNIT" ColumnName="MANAGER_UNIT" />
+                <ScalarProperty Name="MANAGER_UNIT_TEL" ColumnName="MANAGER_UNIT_TEL" />
+                <ScalarProperty Name="MAINTAIN_UNIT" ColumnName="MAINTAIN_UNIT" />
+                <ScalarProperty Name="MAINTAIN_UNIT_TEL" ColumnName="MAINTAIN_UNIT_TEL" />
+                <ScalarProperty Name="RECODE_SAVE_TYPE" ColumnName="RECODE_SAVE_TYPE" />
+                <ScalarProperty Name="DEVICE_STATE" ColumnName="DEVICE_STATE" />
+                <ScalarProperty Name="INDUSTRY_OWN" ColumnName="INDUSTRY_OWN" />
+                <ScalarProperty Name="IS_REGISTER_IMOS" ColumnName="IS_REGISTER_IMOS" />
+                <ScalarProperty Name="IS_WIFI" ColumnName="IS_WIFI" />
+                <ScalarProperty Name="IS_FLASH" ColumnName="IS_FLASH" />
+                <ScalarProperty Name="CAMERA_NO_STR" ColumnName="CAMERA_NO_STR" />
+                <ScalarProperty Name="CAMERA_VCN_CODE" ColumnName="CAMERA_VCN_CODE" />
+                <ScalarProperty Name="FIELD_NO" ColumnName="FIELD_NO" />
+                <ScalarProperty Name="KEY_UNIT" ColumnName="KEY_UNIT" />
+                <ScalarProperty Name="UNIT_TYPE" ColumnName="UNIT_TYPE" />
+                <ScalarProperty Name="SHOW_LEVEL" ColumnName="SHOW_LEVEL" />
+                <ScalarProperty Name="PROTOCOL_TYPE" ColumnName="PROTOCOL_TYPE" />
+                <ScalarProperty Name="CAMERA_PORT" ColumnName="CAMERA_PORT" />
+                <ScalarProperty Name="INTERFACE_TYPE" ColumnName="INTERFACE_TYPE" />
+                <ScalarProperty Name="CHANNEL" ColumnName="CHANNEL" />
+                <ScalarProperty Name="USER_OBJECT" ColumnName="USER_OBJECT" />
+                <ScalarProperty Name="IMG_PATH" ColumnName="IMG_PATH" />
+                <ScalarProperty Name="CAMERA_DESC" ColumnName="CAMERA_DESC" />
+                <ScalarProperty Name="IS_REGISTER_VCN" ColumnName="IS_REGISTER_VCN" />
+                <ScalarProperty Name="IS_DEL" ColumnName="IS_DEL" />
+                <ScalarProperty Name="ORDER_VALUE" ColumnName="ORDER_VALUE" />
+                <ScalarProperty Name="POLLING_RESULT" ColumnName="POLLING_RESULT" />
+                <ScalarProperty Name="POLLING_TIME" ColumnName="POLLING_TIME" />
+                <ScalarProperty Name="SERVER_ID" ColumnName="SERVER_ID" />
+                <ScalarProperty Name="SHORT_MSG" ColumnName="SHORT_MSG" />
+                <ScalarProperty Name="CAMERA_BELONGS_ID" ColumnName="CAMERA_BELONGS_ID" />
+                <ScalarProperty Name="RELATED_CUSTOMS" ColumnName="RELATED_CUSTOMS" />
+                <ScalarProperty Name="ADDED_TO_SDE" ColumnName="ADDED_TO_SDE" />
+                <ScalarProperty Name="CAMERA_BAK" ColumnName="CAMERA_BAK" />
+                <ScalarProperty Name="CAMERA_BELONGS_PK" ColumnName="CAMERA_BELONGS_PK" />
+                <ScalarProperty Name="MEMBERBAR_CODE" ColumnName="MEMBERBAR_CODE" />
+                <ScalarProperty Name="IS_BRANCH" ColumnName="IS_BRANCH" />
+                <ScalarProperty Name="IS_WATCHPOS" ColumnName="IS_WATCHPOS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_USER_INFO">
+            <EntityTypeMapping TypeName="Model.PT_USER_INFO">
+              <MappingFragment StoreEntitySet="PT_USER_INFO">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="IS_MUST_MODIFY_PSD" ColumnName="IS_MUST_MODIFY_PSD" />
+                <ScalarProperty Name="REAL_NAME" ColumnName="REAL_NAME" />
+                <ScalarProperty Name="PINYIN" ColumnName="PINYIN" />
+                <ScalarProperty Name="SEX" ColumnName="SEX" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="ORG_ID" ColumnName="ORG_ID" />
+                <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+                <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="USER_TYPE" ColumnName="USER_TYPE" />
+                <ScalarProperty Name="LAST_LOGIN_TIME" ColumnName="LAST_LOGIN_TIME" />
+                <ScalarProperty Name="LAST_LOGIN_IP" ColumnName="LAST_LOGIN_IP" />
+                <ScalarProperty Name="LOGIN_COUNT" ColumnName="LOGIN_COUNT" />
+                <ScalarProperty Name="QQ_NO" ColumnName="QQ_NO" />
+                <ScalarProperty Name="MSN_NO" ColumnName="MSN_NO" />
+                <ScalarProperty Name="HOME_ADDRESS" ColumnName="HOME_ADDRESS" />
+                <ScalarProperty Name="USER_AVATAR" ColumnName="USER_AVATAR" />
+                <ScalarProperty Name="VCN_USER_ID" ColumnName="VCN_USER_ID" />
+                <ScalarProperty Name="VCN_STR" ColumnName="VCN_STR" />
+                <ScalarProperty Name="PTZ_LEVEL" ColumnName="PTZ_LEVEL" />
+                <ScalarProperty Name="IS_USE_VALIDITY" ColumnName="IS_USE_VALIDITY" />
+                <ScalarProperty Name="VALIDITY_BEGIN_DATE" ColumnName="VALIDITY_BEGIN_DATE" />
+                <ScalarProperty Name="VALIDITY_END_DATE" ColumnName="VALIDITY_END_DATE" />
+                <ScalarProperty Name="SUB_SYS_PRIVILEGE" ColumnName="SUB_SYS_PRIVILEGE" />
+                <ScalarProperty Name="IS_DEL" ColumnName="IS_DEL" />
+                <ScalarProperty Name="ORDER_VALUE" ColumnName="ORDER_VALUE" />
+                <ScalarProperty Name="ADD_ID" ColumnName="ADD_ID" />
+                <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+                <ScalarProperty Name="MODIFY_ID" ColumnName="MODIFY_ID" />
+                <ScalarProperty Name="MODIFY_TIME" ColumnName="MODIFY_TIME" />
+                <ScalarProperty Name="CHANGE_FLAG" ColumnName="CHANGE_FLAG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
