@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript">
+        $(function ()
+        {
+            $("#btnJQAjax").click(function ()
+            {
+                $.ajax(
+                    {
+                        url: "/Ajax/GetDate",
+                        type: "post",
+                        data: {},
+                        success: function (date)
+                        {
+                            alert(date);
+                        }
+                    });
+            });
+
+        });
+        function afterSuccess(data)
+        {
+            alert(data);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="获取时间(jquery异步)" id="btnJQAjax" />
+    </div>
+    <hr />
+    @using (Ajax.BeginForm("GetDate", "Ajax", new AjaxOptions()
+        {
+            Confirm = "确认提交啊",
+            HttpMethod = "Post",
+            UpdateTargetId = "resutDiv",
+            InsertionMode=InsertionMode.Replace,
+            OnSuccess = "afterSuccess",
+            LoadingElementId = "loadingDiv"
+        }))
+    { 
+        <input type="text" />
+        <input type="submit" value="获取时间(MVC异步)" />
+     
+    }
+    <div  id="resutDiv"> </div>
+    <hr />
+        <div id="loadingDiv">
+            <img src="~/Content/loading.gif" />
+        </div>
+</body>
+</html>

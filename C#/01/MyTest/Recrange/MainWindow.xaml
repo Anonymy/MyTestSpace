@@ -1,0 +1,24 @@
+﻿<Window x:Class="Recrange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="420" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <TransformGroup x:Key="TfGroup">
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ScreenshotImage" Source="111.jpg" RenderTransform="{StaticResource TfGroup}"></Image>
+        <Canvas  Name="videocanvas" Background="Transparent"  RenderTransform="{StaticResource TfGroup}"></Canvas>
+        <StackPanel Grid.Column="1">
+            <Button Content="Canvas" Margin="5" Click="Button_Click_1"></Button>
+            <Button Content="draw" Click="Button_Click"></Button>
+            <Button Content="箭头" Click="Button_Click_2"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
