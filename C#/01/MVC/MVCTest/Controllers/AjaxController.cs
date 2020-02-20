@@ -18,7 +18,7 @@ namespace MVCTest.Controllers
 
         public ActionResult GetDate()
         {
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(1000);
             return Content(System.DateTime.Now.ToString());
         }
     }

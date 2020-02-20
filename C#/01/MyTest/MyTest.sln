@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartThreadPool", "SmartThr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recrange", "Recrange\Recrange.csproj", "{68040D11-1E0C-4009-9987-1092644B585A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerFunction", "PlayerFunction\PlayerFunction.csproj", "{E37FA0DA-1255-46B5-A4CA-6089E4A4C10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{372EEDCA-99F7-4558-933F-AF3F59E29F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsControlDemo", "ItemsControlDemo\ItemsControlDemo.csproj", "{E8416578-A4F5-4639-8887-C54885A9009F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "控制窗口拖动", "控制窗口拖动\控制窗口拖动.csproj", "{AC4F216F-6AF6-487A-9299-D1B8EC0832F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{7E40812D-E066-4926-A60D-8C62E7D807E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboBox.csproj", "{7542F6F1-319B-4F73-AA48-D593DB70A388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +33,30 @@ Global
 		{68040D11-1E0C-4009-9987-1092644B585A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68040D11-1E0C-4009-9987-1092644B585A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68040D11-1E0C-4009-9987-1092644B585A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37FA0DA-1255-46B5-A4CA-6089E4A4C10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37FA0DA-1255-46B5-A4CA-6089E4A4C10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37FA0DA-1255-46B5-A4CA-6089E4A4C10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37FA0DA-1255-46B5-A4CA-6089E4A4C10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372EEDCA-99F7-4558-933F-AF3F59E29F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372EEDCA-99F7-4558-933F-AF3F59E29F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372EEDCA-99F7-4558-933F-AF3F59E29F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372EEDCA-99F7-4558-933F-AF3F59E29F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8416578-A4F5-4639-8887-C54885A9009F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8416578-A4F5-4639-8887-C54885A9009F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8416578-A4F5-4639-8887-C54885A9009F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8416578-A4F5-4639-8887-C54885A9009F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4F216F-6AF6-487A-9299-D1B8EC0832F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4F216F-6AF6-487A-9299-D1B8EC0832F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4F216F-6AF6-487A-9299-D1B8EC0832F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4F216F-6AF6-487A-9299-D1B8EC0832F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E40812D-E066-4926-A60D-8C62E7D807E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E40812D-E066-4926-A60D-8C62E7D807E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E40812D-E066-4926-A60D-8C62E7D807E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E40812D-E066-4926-A60D-8C62E7D807E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7542F6F1-319B-4F73-AA48-D593DB70A388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7542F6F1-319B-4F73-AA48-D593DB70A388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7542F6F1-319B-4F73-AA48-D593DB70A388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7542F6F1-319B-4F73-AA48-D593DB70A388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

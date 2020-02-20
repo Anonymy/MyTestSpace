@@ -1,0 +1,70 @@
+﻿<Window x:Class="ComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="ToggleButton" x:Key="stlToggleButton">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border x:Name="Back" Background="Transparent" BorderThickness="0" BorderBrush="Transparent">
+                            <Path Name="PathFill" Fill="White" Width="8" Height="6" StrokeThickness="0" Data="M5,0 L10,10 L0,10 z" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="180"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="PathFill" Property="Fill" Value="#1b94e0"></Setter>
+                                <Setter TargetName="Back" Property="Background" Value="Transparent"></Setter>
+                                <Setter TargetName="Back" Property="BorderBrush" Value="Transparent"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#4ba634">
+        <ComboBox x:Name="combox" Height="30" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#034456">
+            <ComboBoxItem>AAAA</ComboBoxItem>
+            <ComboBoxItem>BBBB</ComboBoxItem>
+            <ComboBoxItem>CCC</ComboBoxItem>
+            <ComboBoxItem>DDD</ComboBoxItem>
+            <ComboBox.Template>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid Background="{TemplateBinding Background}" Opacity="0.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"/>
+                            <ColumnDefinition Width="0.3*" MaxWidth="30"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox  Grid.Column="0" IsReadOnly="True" Foreground="Black" BorderThickness="1" BorderBrush="Transparent"  Text="{TemplateBinding Text}" MaxWidth="170" Background="Transparent"></TextBox>
+                        <Border  Grid.Column="0" BorderThickness="0" Background="Transparent">
+                        </Border>
+                        <Border Grid.Column="1" BorderThickness="0" CornerRadius="0,1,1,0" Background="Transparent">
+                            <ToggleButton Style="{StaticResource stlToggleButton}" IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press"></ToggleButton>
+                        </Border>
+                        <Popup IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" x:Name="Popup" Focusable="False" AllowsTransparency="True" PopupAnimation="Slide">
+                            <Border Opacity="0.5" CornerRadius="1" MaxHeight="{TemplateBinding MaxDropDownHeight}"  Background="{TemplateBinding Background}" MinWidth="{TemplateBinding ActualWidth}" MaxWidth="200"  x:Name="DropDown" SnapsToDevicePixels="True" >
+                                <Border.Effect>
+                                    <DropShadowEffect Color="#085e77" BlurRadius="2" ShadowDepth="0" Opacity="0.5"/>
+                                </Border.Effect>
+                                <ScrollViewer Margin="4,6,4,6"  MaxHeight="{TemplateBinding MaxDropDownHeight}" SnapsToDevicePixels="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" CanContentScroll="True">
+                                    <!-- StackPanel 用于显示子级，方法是将 IsItemsHost 设置为 True -->
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </ComboBox.Template>
+        </ComboBox>
+    </Grid>
+</Window>

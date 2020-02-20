@@ -1,0 +1,13 @@
+﻿<Window x:Class="控制窗口拖动.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid>
+        <Button Height="30" Width="85" VerticalAlignment="Center" x:Name="borderFace"></Button>
+        <Popup  x:Name="PopFace" StaysOpen="True" Width="120" Placement="Left" PlacementTarget="{Binding ElementName=borderFace}" AllowsTransparency="True">
+            <Border Background="BlueViolet">
+                
+            </Border>
+        </Popup>
+    </Grid>
+</Window>

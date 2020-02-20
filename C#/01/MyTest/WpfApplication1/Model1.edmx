@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="VIPF_CASE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="WARNING_CODE" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_CODE" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_ORGID" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_HANDLERECORD" Type="varchar2" MaxLength="1000" />
+          <Property Name="CASE_JURISEDITION" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_ADMIN" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_POLICES" Type="varchar2" MaxLength="4000" />
+          <Property Name="CASE_LONGITUDE" Type="varchar2" MaxLength="20" />
+          <Property Name="CASE_LITATUDE" Type="varchar2" MaxLength="20" />
+          <Property Name="CASE_FROM" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_CREATOR" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_ADDRESS" Type="varchar2" MaxLength="100" />
+          <Property Name="CASE_NAME" Type="varchar2" MaxLength="255" />
+          <Property Name="CASE_STARTTIME" Type="date" />
+          <Property Name="CASE_ENDTIME" Type="date" />
+          <Property Name="CASE_FIDETIME" Type="date" />
+          <Property Name="CASE_BRIEFINFO" Type="varchar2" MaxLength="4000" />
+          <Property Name="CASE_TYPE" Type="number" Precision="38" Scale="0" />
+          <Property Name="CASE_OVERREMARK" Type="varchar2" MaxLength="4000" />
+          <Property Name="CASE_LABEL" Type="varchar2" MaxLength="50" />
+          <Property Name="CASE_STATUS" Type="number" Precision="38" Scale="0" />
+          <Property Name="CASE_OVERTIME" Type="date" />
+          <Property Name="CASE_CREATETIME" Type="date" />
+          <Property Name="CASE_WARNINGTIME" Type="date" />
+          <Property Name="VICTIM" Type="varchar2" MaxLength="500" />
+          <Property Name="VICTIM_CARDTYPE" Type="varchar2" MaxLength="50" />
+          <Property Name="VICTIM_CARDNUM" Type="varchar2" MaxLength="500" />
+          <Property Name="VICTIM_PHONENUM" Type="varchar2" MaxLength="200" />
+          <Property Name="SUSPECT_NAME" Type="varchar2" MaxLength="100" />
+          <Property Name="SUSPECT_CARDTYPE" Type="varchar2" MaxLength="50" />
+          <Property Name="SUSPECT_CARDNUM" Type="varchar2" MaxLength="500" />
+          <Property Name="SUSPECT_PHONENUM" Type="varchar2" MaxLength="200" />
+          <Property Name="CASE_WARNINGPOLICE" Type="varchar2" MaxLength="100" />
+          <Property Name="ALARMPEOPLE" Type="varchar2" MaxLength="500" />
+          <Property Name="ALARMPEOPLE_CARDTYPE" Type="varchar2" MaxLength="50" />
+          <Property Name="ALARMPEOPLE_CARDNUM" Type="varchar2" MaxLength="500" />
+          <Property Name="ALARMPEOPLE_PHONENUM" Type="varchar2" MaxLength="200" />
+          <Property Name="COLLECTIONMARK" Type="varchar2" MaxLength="50" />
+          <Property Name="IS_DEL" Type="varchar2" MaxLength="50" />
+          <Property Name="MAIN_CLUEID" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VIPF_CASE_RELATED_ASS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CASEID" Type="varchar2" MaxLength="50" />
+          <Property Name="CASERELATEDID" Type="varchar2" MaxLength="50" />
+          <Property Name="CREATER" Type="varchar2" MaxLength="50" />
+          <Property Name="CREATE_TM" Type="date" />
+          <Property Name="CREATER_ORG" Type="varchar2" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar2" MaxLength="200" />
+          <Property Name="IS_DEL" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="VIPF_CASE" EntityType="Self.VIPF_CASE" Schema="SHINY" store:Type="Tables" />
+          <EntitySet Name="VIPF_CASE_RELATED_ASS" EntityType="Self.VIPF_CASE_RELATED_ASS" Schema="SHINY" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="VIPF_CASE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WARNING_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_ORGID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_HANDLERECORD" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_JURISEDITION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_ADMIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_POLICES" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_LONGITUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_LITATUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_FROM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_CREATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_STARTTIME" Type="DateTime" />
+          <Property Name="CASE_ENDTIME" Type="DateTime" />
+          <Property Name="CASE_FIDETIME" Type="DateTime" />
+          <Property Name="CASE_BRIEFINFO" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_TYPE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CASE_OVERREMARK" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_STATUS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CASE_OVERTIME" Type="DateTime" />
+          <Property Name="CASE_CREATETIME" Type="DateTime" />
+          <Property Name="CASE_WARNINGTIME" Type="DateTime" />
+          <Property Name="VICTIM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="VICTIM_CARDTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VICTIM_CARDNUM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="VICTIM_PHONENUM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SUSPECT_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SUSPECT_CARDTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SUSPECT_CARDNUM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SUSPECT_PHONENUM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CASE_WARNINGPOLICE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ALARMPEOPLE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ALARMPEOPLE_CARDTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALARMPEOPLE_CARDNUM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ALARMPEOPLE_PHONENUM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="COLLECTIONMARK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IS_DEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MAIN_CLUEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VIPF_CASE_RELATED_ASS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CASEID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CASERELATEDID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CREATER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CREATE_TM" Type="DateTime" />
+          <Property Name="CREATER_ORG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IS_DEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VIPF_CASE" EntityType="Self.VIPF_CASE" />
+          <EntitySet Name="VIPF_CASE_RELATED_ASS" EntityType="Self.VIPF_CASE_RELATED_ASS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="VIPF_CASE">
+            <EntityTypeMapping TypeName="Model.VIPF_CASE">
+              <MappingFragment StoreEntitySet="VIPF_CASE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WARNING_CODE" ColumnName="WARNING_CODE" />
+                <ScalarProperty Name="CASE_CODE" ColumnName="CASE_CODE" />
+                <ScalarProperty Name="CASE_ORGID" ColumnName="CASE_ORGID" />
+                <ScalarProperty Name="CASE_HANDLERECORD" ColumnName="CASE_HANDLERECORD" />
+                <ScalarProperty Name="CASE_JURISEDITION" ColumnName="CASE_JURISEDITION" />
+                <ScalarProperty Name="CASE_ADMIN" ColumnName="CASE_ADMIN" />
+                <ScalarProperty Name="CASE_POLICES" ColumnName="CASE_POLICES" />
+                <ScalarProperty Name="CASE_LONGITUDE" ColumnName="CASE_LONGITUDE" />
+                <ScalarProperty Name="CASE_LITATUDE" ColumnName="CASE_LITATUDE" />
+                <ScalarProperty Name="CASE_FROM" ColumnName="CASE_FROM" />
+                <ScalarProperty Name="CASE_CREATOR" ColumnName="CASE_CREATOR" />
+                <ScalarProperty Name="CASE_ADDRESS" ColumnName="CASE_ADDRESS" />
+                <ScalarProperty Name="CASE_NAME" ColumnName="CASE_NAME" />
+                <ScalarProperty Name="CASE_STARTTIME" ColumnName="CASE_STARTTIME" />
+                <ScalarProperty Name="CASE_ENDTIME" ColumnName="CASE_ENDTIME" />
+                <ScalarProperty Name="CASE_FIDETIME" ColumnName="CASE_FIDETIME" />
+                <ScalarProperty Name="CASE_BRIEFINFO" ColumnName="CASE_BRIEFINFO" />
+                <ScalarProperty Name="CASE_TYPE" ColumnName="CASE_TYPE" />
+                <ScalarProperty Name="CASE_OVERREMARK" ColumnName="CASE_OVERREMARK" />
+                <ScalarProperty Name="CASE_LABEL" ColumnName="CASE_LABEL" />
+                <ScalarProperty Name="CASE_STATUS" ColumnName="CASE_STATUS" />
+                <ScalarProperty Name="CASE_OVERTIME" ColumnName="CASE_OVERTIME" />
+                <ScalarProperty Name="CASE_CREATETIME" ColumnName="CASE_CREATETIME" />
+                <ScalarProperty Name="CASE_WARNINGTIME" ColumnName="CASE_WARNINGTIME" />
+                <ScalarProperty Name="VICTIM" ColumnName="VICTIM" />
+                <ScalarProperty Name="VICTIM_CARDTYPE" ColumnName="VICTIM_CARDTYPE" />
+                <ScalarProperty Name="VICTIM_CARDNUM" ColumnName="VICTIM_CARDNUM" />
+                <ScalarProperty Name="VICTIM_PHONENUM" ColumnName="VICTIM_PHONENUM" />
+                <ScalarProperty Name="SUSPECT_NAME" ColumnName="SUSPECT_NAME" />
+                <ScalarProperty Name="SUSPECT_CARDTYPE" ColumnName="SUSPECT_CARDTYPE" />
+                <ScalarProperty Name="SUSPECT_CARDNUM" ColumnName="SUSPECT_CARDNUM" />
+                <ScalarProperty Name="SUSPECT_PHONENUM" ColumnName="SUSPECT_PHONENUM" />
+                <ScalarProperty Name="CASE_WARNINGPOLICE" ColumnName="CASE_WARNINGPOLICE" />
+                <ScalarProperty Name="ALARMPEOPLE" ColumnName="ALARMPEOPLE" />
+                <ScalarProperty Name="ALARMPEOPLE_CARDTYPE" ColumnName="ALARMPEOPLE_CARDTYPE" />
+                <ScalarProperty Name="ALARMPEOPLE_CARDNUM" ColumnName="ALARMPEOPLE_CARDNUM" />
+                <ScalarProperty Name="ALARMPEOPLE_PHONENUM" ColumnName="ALARMPEOPLE_PHONENUM" />
+                <ScalarProperty Name="COLLECTIONMARK" ColumnName="COLLECTIONMARK" />
+                <ScalarProperty Name="IS_DEL" ColumnName="IS_DEL" />
+                <ScalarProperty Name="MAIN_CLUEID" ColumnName="MAIN_CLUEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIPF_CASE_RELATED_ASS">
+            <EntityTypeMapping TypeName="Model.VIPF_CASE_RELATED_ASS">
+              <MappingFragment StoreEntitySet="VIPF_CASE_RELATED_ASS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CASEID" ColumnName="CASEID" />
+                <ScalarProperty Name="CASERELATEDID" ColumnName="CASERELATEDID" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="CREATE_TM" ColumnName="CREATE_TM" />
+                <ScalarProperty Name="CREATER_ORG" ColumnName="CREATER_ORG" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="IS_DEL" ColumnName="IS_DEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
